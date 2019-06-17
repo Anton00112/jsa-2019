@@ -18,23 +18,34 @@
 // }
 
 // everyThird(4);
-    function arrSum(a) {
-        var c = 0;
-        for(var i = 0; i < a.length; i++){
-            if(a[i].toString().length > 1) {
-                c++;
-                a[i] = a[i].toString().split('').reduce((a, b) => parseInt(a) = parseInt(b));
-            }
+    // function arrSum(a) {
+    //     var c = 0;
+    //     for(var i = 0; i < a.length; i++){
+    //         if(a[i].toString().length > 1) {
+    //             c++;
+    //             a[i] = a[i].toString().split('').reduce((a, b) => parseInt(a) = parseInt(b));
+    //         }
            
 
-        }
-    }
-    if(c > 0){
-        return arrSum(a);
-        } else {
-        return a.reduce((a. b) => a + b);
-        }
+    //     }
+    // }
+    // if(c > 0){
+    //     return arrSum(a);
+    //     } else {
+    //     return a.reduce((a. b) => a + b);
+    //     }
 
-    }
-    var r = arrSum([248, 21, 95, 239, 46]);
+    // }
+    // var r = arrSum([248, 21, 95, 239, 46]);
+    // console.log(r);
+
+    // module.exports = {
+    //     arrSum,
+    //     everyThird
+    // };
+    var func = require('./v2');
+
+    func.everyThird(2);
+
+    var r = func.arrSum([248, 21, 95, 239, 46]);
     console.log(r);
