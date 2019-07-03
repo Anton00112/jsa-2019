@@ -4,7 +4,8 @@ var students = require('./handlers/students');
 var calculator = require('./handlers/calculator');
 
 var api = express();
-api.use()
+api.use(bodyParser.json());
+api.use(express.static('www'));
 
 api.get('/students', students.GetAllStudents);
 api.get('/students/:id', students.GetStudentByID);
