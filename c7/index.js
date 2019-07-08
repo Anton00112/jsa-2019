@@ -3,10 +3,16 @@ var bodyParser = require('body-parser');
 var students = require('./handlers/students');
 var calculator = require('./handlers/calculator');
 var hbs = require('express-hbs');
+api.engine('hbs', hbs.express4({
+    partialsDir: __dirname + '/views/partials'
+}))
+api.set('view engine', 'hbs');
+api.set('views', __dirname + '/views');
 
 var api = express();
 api.use(bodyParser.json());
 api.use(express.static('www'));
+var food = require
 var templates = require('./handlers/templates');
 
 api.get('/students', students.GetAllStudents);

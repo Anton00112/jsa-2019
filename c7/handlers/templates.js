@@ -1,5 +1,6 @@
 var First = (req, res) => {
-    res.render('first');
+    var data = {ime: 'Pero', prezime: 'Perovski'};
+    res.render('first', data);
 }
 
 module.exports = {
